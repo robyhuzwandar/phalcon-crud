@@ -1,0 +1,25 @@
+<a class="btn btn-primary" href="/phalcon/crud1/komunitas/create">Tambah</a>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Kontak</th>
+        <th>Opsi</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($data as $k) { ?>
+      
+    
+      <tr>
+        <td><?php echo $k->name ?></td>
+        <td><?php echo $k->contact ?></td>
+        <td>
+          <a onclick="window.alert('Hapus komunitas ?')" href="komunitas/delete/ <?php echo $k->id ?>" class="btn btn-danger">delete</a>
+          <a href="komunitas/edit/ <?php echo $k->id ?>" class="btn btn-warning">Edit</a>
+        </td>
+      </tr>
+    <?php } ?>
+    </tbody>
+  </table>
